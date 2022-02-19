@@ -6,7 +6,7 @@ js 常见函数工具库
 
 ## Install(安装)
 
-npm install js-util-libs --save ...
+npm install js-util-libs --save
 
 ## Usage(使用)
 
