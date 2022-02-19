@@ -18,7 +18,8 @@
     "keywords": [
         "js-util-libs",
         "debounce",
-        "throttle"
+        "throttle",
+        "deepCopy"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
