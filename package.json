@@ -36,7 +36,8 @@
         "sort",
         "selectionSort",
         "shallCopy",
-        "flat"
+        "flat",
+        "unique"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

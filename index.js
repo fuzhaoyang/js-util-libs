@@ -49,3 +49,6 @@ export { selectionSort } from "./sort/selection_sort/index.js";
 
 // 数组扁平化
 export { flat } from "./flat/index.js";
+
+// 数组去重
+export { unique } from "./unique/index.js";
