@@ -1,47 +1,3 @@
-# 坚持造轮子第二天 - 防抖与节流
-
-二话不说 轮子我都会造 还怕你面试问吗？
-一天造一个轮子，干就完了。
-
-## 看点
-- 针对大厂笔试、面试必考手写题目
-- TDD方式开发
-- 配合视频讲解
-
-
-## 造轮子计划
-（计划赶不上变化 随时迭代 欢迎留言 随时摸鱼）
-- 框架基础
-  - [模板引擎](https://juejin.im/post/6884138429181870093)
-  - 防抖
-  - 节流
-  - 前端路由
-  - 统一状态管理
-  - 时间旅行
-  - HTML编译器
-  - Pipe管道
-  - 双向绑定
-  - 原生Ajax
-- JS基础
-  - Compose
-  - Promise
-  - Promise.all/race
-  - 路由
-  - new
-  - call/apply/bind
-  - Object.create
-  - 深拷贝、浅拷贝
-- 算法、设计模式
-  - 二分查找
-  - 快排
-  - 二分查找
-  - 冒泡排序
-  - 选择排序
-  - 订阅发布
-  - 斐波那契算法
-  - 去重
-
-
 ## 防抖和节流
 防抖和节流可以说是一对好基友，也是前端面试的手写热点考题。防抖和节流其实都是在规避频繁触发回调导致大量计算，从而影响页面发生抖动甚至卡顿。简单的说将多次回调比如页面点击或ajax调用变为一次。防抖和节流的区别在于以第一次为准还是最后一次为准。
 
@@ -160,9 +116,6 @@ module.exports.debounce = (fn, delay) => {
 ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/531a5dd783ac40bcae2b89717e9ce5bf~tplv-k3u1fbpfcp-watermark.image)
 
 OK 任务完成
-
-## 关注全栈然叔 带你坚持天天造轮子 （周末休息 拒绝996）
-- ### 源码地址 https://github.com/su37josephxia/wheel-awesome
 
 
 
