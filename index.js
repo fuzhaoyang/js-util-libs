@@ -46,3 +46,6 @@ export { sort } from "./sort/quick_sort/index.js";
 
 // 选择排序
 export { selectionSort } from "./sort/selection_sort/index.js";
+
+// 数组扁平化
+export { flat } from "./flat/index.js";
