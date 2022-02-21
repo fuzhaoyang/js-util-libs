@@ -28,7 +28,13 @@
         "matchingAllImg",
         "scrollAnimation",
         "loadScript",
-        "getUrlParms"
+        "getUrlParms",
+        "bubbleSort",
+        "counterSort",
+        "insertSort",
+        "mergeSort",
+        "sort",
+        "selectionSort"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

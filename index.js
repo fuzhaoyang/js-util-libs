@@ -25,3 +25,21 @@ export { loadScript } from "./loadScript/index.js";
 
 //  获取url参数
 export { getUrlParms } from "./getUrlParms/index.js";
+
+// 冒泡排序法
+export { bubbleSort } from "./sort/bubble_sort/index.js";
+
+// 计数排序法
+export { counterSort } from "./sort/counter_sort/index.js";
+
+// 插入排序法
+export { insertSort } from "./sort/insert_sort/index.js";
+
+// 归并排序
+export { mergeSort } from "./sort/counter_sort/index.js";
+
+// 快速排序
+export { sort } from "./sort/quick_sort/index.js";
+
+// 选择排序
+export { selectionSort } from "./sort/selection_sort/index.js";

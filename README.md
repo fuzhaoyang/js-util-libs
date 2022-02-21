@@ -29,7 +29,8 @@ npm install js-util-libs --save
 5、npm test 跑测试用例  
 6、不要修改packjson版本号，版本号为线上最新用户使用版本  
 7、Pull requests 测试用例过后，静等作者合代码  
-8、获取地址栏url参数
+8、获取地址栏url参数  
+9、6种排序方式（1：冒泡排序 2：计数排序 3：插入排序 4：归并排序 5：快速排序 6：选择排序）
 
 ## Contact me(联系我)
 ![image](https://user-images.githubusercontent.com/25168173/154791040-09b5e289-5533-4aa2-9e6d-cb11eabfddf3.png)
