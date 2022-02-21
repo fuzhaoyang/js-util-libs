@@ -12,7 +12,7 @@ npm install js-util-libs --save
 
 1、防抖节流  
 2、深拷贝  
-3、call,apply,bind
+3、call,apply,bind  
 4、时间戳转时间格式
 
 
@@ -20,9 +20,9 @@ npm install js-util-libs --save
 提Pr步骤  
 1、src底下创建自己模块函数的文件夹  
 2、函数模块包含markdow说明，有自己测试用例（必须）  
-3、根部index.js导出函数
-4、packjson keywords里写自己函数关键字
-5、不要修改packjson版本号，版本号为线上最新用户使用版本
+3、根部index.js导出函数  
+4、packjson keywords里写自己函数关键字  
+5、不要修改packjson版本号，版本号为线上最新用户使用版本  
 6、Pull requests 测试用例过后，静等作者合代码
 
 ## Contact me(联系我)
