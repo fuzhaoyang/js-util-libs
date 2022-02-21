@@ -16,10 +16,13 @@
         "coverage": "jest --coverage"
     },
     "keywords": [
-        "js-util-libs",
+        "js-util-libs", 
         "debounce",
         "throttle",
-        "deepCopy"
+        "deepCopy",
+        "apply",
+        "bind",
+        "call"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
