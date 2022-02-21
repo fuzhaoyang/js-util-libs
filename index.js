@@ -13,3 +13,6 @@ export { dateFormat } from "./dateFormat/index.js";
 
 // 转义字符转为前端展示字符号
 export { escapeHtml } from "./escapeHtml/index.js";
+
+// 匹配字符串中所有的图片src
+export { matchingAllImg } from "./matchingAllImg/index.js";

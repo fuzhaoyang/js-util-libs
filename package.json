@@ -24,7 +24,8 @@
         "bind",
         "call",
         "dateFormat",
-        "escapeHtml"
+        "escapeHtml",
+        "matchingAllImg"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
