@@ -16,3 +16,6 @@ export { escapeHtml } from "./escapeHtml/index.js";
 
 // 匹配字符串中所有的图片src
 export { matchingAllImg } from "./matchingAllImg/index.js";
+
+// 原生实现鼠标滚动动画缓冲
+export { scrollAnimation } from "./scrollAnimation/index.js";

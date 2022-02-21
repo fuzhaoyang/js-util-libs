@@ -25,7 +25,8 @@
         "call",
         "dateFormat",
         "escapeHtml",
-        "matchingAllImg"
+        "matchingAllImg",
+        "scrollAnimation"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
