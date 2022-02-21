@@ -86,3 +86,19 @@ export {
     isIpv4,
 }
 from "./check/index.js";
+
+// 判断手机是Andoird还是IOS
+export { getOSType }
+from "./getOSType/index.js";
+
+// 判断手机是Andoird还是IOS
+export { cliboard }
+from "./cliboard/index.js";
+
+// 判断是浏览器内核
+export { checkBrowser }
+from "./checkBrowser/index.js";
+
+// cookie 设置 获取 移除
+export { cookieSet, cookieGet, cookieRemove }
+from "./cookie/index.js";
