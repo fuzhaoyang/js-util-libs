@@ -26,7 +26,8 @@
         "dateFormat",
         "escapeHtml",
         "matchingAllImg",
-        "scrollAnimation"
+        "scrollAnimation",
+        "loadScript"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
