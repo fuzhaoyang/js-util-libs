@@ -27,7 +27,8 @@
         "escapeHtml",
         "matchingAllImg",
         "scrollAnimation",
-        "loadScript"
+        "loadScript",
+        "getUrlParms"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

@@ -22,3 +22,6 @@ export { scrollAnimation } from "./scrollAnimation/index.js";
 
 //  异步加载多个外部js方案
 export { loadScript } from "./loadScript/index.js";
+
+//  获取url参数
+export { getUrlParms } from "./getUrlParms/index.js";

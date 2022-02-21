@@ -28,7 +28,8 @@ npm install js-util-libs --save
 4、packjson keywords里写自己函数关键字  
 5、npm test 跑测试用例  
 6、不要修改packjson版本号，版本号为线上最新用户使用版本  
-7、Pull requests 测试用例过后，静等作者合代码
+7、Pull requests 测试用例过后，静等作者合代码  
+8、获取地址栏url参数
 
 ## Contact me(联系我)
 ![image](https://user-images.githubusercontent.com/25168173/154791040-09b5e289-5533-4aa2-9e6d-cb11eabfddf3.png)
