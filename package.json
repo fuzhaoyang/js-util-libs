@@ -34,7 +34,8 @@
         "insertSort",
         "mergeSort",
         "sort",
-        "selectionSort"
+        "selectionSort",
+        "shallCopy"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

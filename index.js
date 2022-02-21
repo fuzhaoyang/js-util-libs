@@ -5,6 +5,9 @@ from "./src/throttle_debounce/index.js";
 // 深拷贝
 export { deepCopy } from "./src/deepCopy/index.js";
 
+// 浅拷贝
+export { shallCopy } from "./shallCopy/index.js";
+
 // call apply bind
 export { call, apply, bind } from "./src/call-apply-bind/index.js";
 
