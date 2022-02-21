@@ -16,7 +16,7 @@
         "coverage": "jest --coverage"
     },
     "keywords": [
-        "js-util-libs", 
+        "js-util-libs",
         "debounce",
         "throttle",
         "deepCopy",
@@ -37,7 +37,19 @@
         "selectionSort",
         "shallCopy",
         "flat",
-        "unique"
+        "unique",
+        "isEmail",
+        "isPhone",
+        "isURL",
+        "isWeiXin",
+        "isQQ",
+        "isCarNo",
+        "password",
+        "isCn",
+        "isPostNo",
+        "isRGB",
+        "isIdCard",
+        "isIpv4"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
