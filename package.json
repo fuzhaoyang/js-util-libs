@@ -23,7 +23,8 @@
         "apply",
         "bind",
         "call",
-        "dateFormat"
+        "dateFormat",
+        "escapeHtml"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
