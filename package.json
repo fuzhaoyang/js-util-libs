@@ -58,7 +58,9 @@
         "cookieRemove",
         "getHtmlText",
         "base64Decode",
-        "base64Encode"
+        "base64Encode",
+        "utf8Decode",
+        "utf8Encode"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

@@ -39,7 +39,8 @@ npm install js-util-libs --save
     27、判断是浏览器内核  
     28、cookie 设置 获取 移除  
     29、获取HTML中的纯文本信息  
-    30、Base64 加密 解密
+    30、Base64 加密 解密  
+    31、UTF-8 加密解密  
 
 
 

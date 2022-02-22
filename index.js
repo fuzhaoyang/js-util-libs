@@ -110,3 +110,7 @@ from "./getHtmlText/index.js";
 //实现base64解码加密
 export { base64Decode ,base64Encode } 
 from "./base64/index.js";
+
+//实现utf-8解码加密
+export { utf8Decode ,utf8Encode } 
+from "./base64/index.js";
