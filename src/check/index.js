@@ -75,3 +75,22 @@ exports.isIpv4 = (s) => {
         /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
     return ipv4Reg.test(s);
 };
+
+/**
+ *  判断是否是数字
+ * @param {Number} data
+ */
+ exports.checkNum = value => {
+    return typeof value === 'number' && !isNaN(value);
+ }
+
+ //判断是否为对象
+ const isObject = val =>
+   typeof val === "function" || (typeof val === "object" && !!val);
+ exports.isObject = isObject;
+
+ //判断是否为{}空对象
+ exports.isEmptyObject = val => isObject(val) && JSON.stringify(val) == "{}";
+
+ //判断是否为数组
+exports.isArray = val => Array.isArray(val);

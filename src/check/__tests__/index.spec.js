@@ -13,6 +13,8 @@ describe("常用校验方法", () => {
             isRGB,
             isIdCard,
             isIpv4,
+            checkNum,
+            isEmptyObject
         } = require("../index");
         // 邮箱测试
         expect(isEmail("932647051@qq.com")).toBe(true);
@@ -61,5 +63,14 @@ describe("常用校验方法", () => {
         //IPv4的校验
         expect(isIpv4("122.12.56.65")).toBe(true);
         expect(isIpv4("122.12.56.655")).toBe(false);
+
+        //判断是否是数字
+        expect(checkNum(5)).toBe(true);
+        expect(checkNum("66")).toBe(false);
+
+         //判断是否为{}空对象
+         expect(isEmptyObject({})).toBe(true);
+         expect(isEmptyObject("66")).toBe(false);
+         expect(isEmptyObject({a:4})).toBe(false);
     });
 });

@@ -41,6 +41,7 @@ npm install js-util-libs --save
     29、获取HTML中的纯文本信息  
     30、Base64 加密 解密  
     31、UTF-8 加密解密  
+    32、数字 对象 空对象 是否数组校验  
 
 
 
