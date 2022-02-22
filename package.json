@@ -56,7 +56,9 @@
         "cookieSet",
         "cookieGet",
         "cookieRemove",
-        "getHtmlText"
+        "getHtmlText",
+        "base64Decode",
+        "base64Encode"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

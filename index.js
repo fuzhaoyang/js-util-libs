@@ -106,3 +106,7 @@ from "./cookie/index.js";
 // 获取 html 文本中转化为 html 后的纯文本信息
 export { getHtmlText }
 from "./getHtmlText/index.js";
+
+//实现base64解码加密
+export { base64Decode ,base64Encode } 
+from "./base64/index.js";
