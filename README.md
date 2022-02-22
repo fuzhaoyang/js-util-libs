@@ -56,19 +56,21 @@ npm install js-util-libs --save
 
     17、去除空格  
 
-    18、Base64 
+    18、数字千分位分割    
+
+    19、Base64 
 
         1.加密  
 
         2.解密  
 
-    19、UTF-8 
+    20、UTF-8 
 
         1.加密  
 
         2.解密  
 
-    20、cookie  
+    21、cookie  
 
         1.设置
 
@@ -77,7 +79,7 @@ npm install js-util-libs --save
         3.移除  
 
 
-    21、常用校验  
+    22、常用校验  
 
         1.邮箱校验  
 
