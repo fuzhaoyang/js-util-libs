@@ -1,7 +1,7 @@
 {
     "name": "js-util-libs",
     "description": "js常见的函数工具库",
-    "version": "1.1.9",
+    "version": "1.2.0",
     "author": "fuzhaoyang <932647051@qq.com>",
     "license": "MIT",
     "main": "index.js",
@@ -65,7 +65,8 @@
         "isObject",
         "isEmptyObject",
         "isArray",
-        "isType"
+        "isType",
+        "trim"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

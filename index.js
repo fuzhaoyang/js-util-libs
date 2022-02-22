@@ -70,7 +70,7 @@ from "./flat/index.js";
 export { unique }
 from "./unique/index.js";
 
-// 邮箱 手机号 URL 微信号 qq号 车牌号 密码强度校验 是否含中文 邮编号 16进制颜色 身份证号 ipv4 数字 对象 空对象 数组
+// 邮箱 手机号 URL 微信号 qq号 车牌号 密码强度校验 是否含中文 邮编号 16进制颜色 身份证号 ipv4 数字 对象 空对象 数组 基本数据类型
 export {
     isEmail,
     isPhone,
@@ -119,3 +119,7 @@ from "./base64/index.js";
 //实现utf-8解码加密
 export { utf8Decode ,utf8Encode } 
 from "./base64/index.js";
+
+//去除空格
+export { trim } 
+from "./trim/index.js";

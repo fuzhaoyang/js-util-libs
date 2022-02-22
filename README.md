@@ -41,7 +41,7 @@ npm install js-util-libs --save
         4：归并排序 
 
         5：快速排序 
-        
+
         6：选择排序
 
     12、数组扁平化  
@@ -52,21 +52,23 @@ npm install js-util-libs --save
 
     15、判断是浏览器内核  
 
-    16、获取HTML中的纯文本信息 
+    16、获取HTML中的纯文本信息  
 
-    17、Base64 
+    17、去除空格  
 
-        1.加密  
-
-        2.解密  
-
-    18、UTF-8 
+    18、Base64 
 
         1.加密  
 
         2.解密  
 
-    19、cookie  
+    19、UTF-8 
+
+        1.加密  
+
+        2.解密  
+
+    20、cookie  
 
         1.设置
 
@@ -75,7 +77,7 @@ npm install js-util-libs --save
         3.移除  
 
 
-    20、常用校验  
+    21、常用校验  
 
         1.邮箱校验  
 
