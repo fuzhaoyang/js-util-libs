@@ -37,7 +37,8 @@ npm install js-util-libs --save
     25、判断手机是Andoird还是IOS  
     26、复制文本到粘贴板  
     27、判断是浏览器内核  
-    28、cookie 设置 获取 移除 
+    28、cookie 设置 获取 移除  
+    29、获取HTML中的纯文本信息
 
 
 

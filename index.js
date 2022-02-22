@@ -102,3 +102,7 @@ from "./checkBrowser/index.js";
 // cookie 设置 获取 移除
 export { cookieSet, cookieGet, cookieRemove }
 from "./cookie/index.js";
+
+// 获取 html 文本中转化为 html 后的纯文本信息
+export { getHtmlText }
+from "./getHtmlText/index.js";
