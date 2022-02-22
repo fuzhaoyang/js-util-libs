@@ -87,7 +87,8 @@ export {
     checkNum,
     isObject,
     isEmptyObject,
-    isArray
+    isArray,
+    isType
 }
 from "./check/index.js";
 

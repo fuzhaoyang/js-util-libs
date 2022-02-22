@@ -64,7 +64,8 @@
         "checkNum",
         "isObject",
         "isEmptyObject",
-        "isArray"
+        "isArray",
+        "isType"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

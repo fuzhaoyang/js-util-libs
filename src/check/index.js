@@ -94,3 +94,6 @@ exports.isIpv4 = (s) => {
 
  //判断是否为数组
 exports.isArray = val => Array.isArray(val);
+
+// 判断当前数据类型
+exports.isType = value => Object.prototype.toString.call(value).slice(8,-1);
