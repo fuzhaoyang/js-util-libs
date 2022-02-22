@@ -127,3 +127,7 @@ from "./trim/index.js";
 // 数字千分位分割
 export { thousandth } 
 from "./thousandth/index.js";
+
+// 将数字转换为大写金额
+export { changeToChinese } 
+from "./changeToChinese/index.js";

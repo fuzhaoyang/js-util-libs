@@ -67,7 +67,8 @@
         "isArray",
         "isType",
         "trim",
-        "thousandth"
+        "thousandth",
+        "changeToChinese"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
