@@ -68,7 +68,8 @@
         "isType",
         "trim",
         "thousandth",
-        "changeToChinese"
+        "changeToChinese",
+        "formatSize"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

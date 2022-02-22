@@ -131,3 +131,7 @@ from "./thousandth/index.js";
 // 将数字转换为大写金额
 export { changeToChinese } 
 from "./changeToChinese/index.js";
+
+// 文件大小格式化
+export { formatSize } 
+from "./formatSize/index.js";

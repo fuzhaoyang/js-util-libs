@@ -1,5 +1,5 @@
 // 将阿拉伯数字翻译成中文的大写数字
-exports.changeToChinese = (num) = >{
+exports.changeToChinese = (num) =>{
 	let AA = new Array("零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十");
 	let BB = new Array("", "十", "百", "仟", "萬", "億", "点", "");
 	let a = ("" + num).replace(/(^0*)/g, "").split("."),
