@@ -135,3 +135,7 @@ from "./changeToChinese/index.js";
 // 文件大小格式化
 export { formatSize } 
 from "./formatSize/index.js";
+
+// 加载样式文件
+export { loadStyle } 
+from "./loadStyle/index.js";

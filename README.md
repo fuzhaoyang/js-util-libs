@@ -62,19 +62,21 @@ npm install js-util-libs --save
 
     20、文件大小格式化 (B,KB,MB,GB)  
 
-    21、Base64 
+    21、动态加载外部样式文件    
+
+    22、Base64 
 
         1.加密  
 
         2.解密  
 
-    22、UTF-8 
+    23、UTF-8 
 
         1.加密  
 
         2.解密  
 
-    23、cookie  
+    24、cookie  
 
         1.设置
 
@@ -83,7 +85,7 @@ npm install js-util-libs --save
         3.移除  
 
 
-    24、常用校验  
+    25、常用校验  
 
         1.邮箱校验  
 
