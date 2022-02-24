@@ -22,7 +22,9 @@ npm install js-util-libs --save
         
         1:YYYY-MM-DD HH:MM:SS  
 
-        2:刚刚、几天前、几个月前、几年前
+        2:刚刚、几天前、几个月前、几年前  
+
+        3:星期几
 
     6、转义字符转换  
 

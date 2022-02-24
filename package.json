@@ -25,6 +25,7 @@
         "call",
         "dateFormat",
         "beforeDateFormat",
+        "getWeek",
         "escapeHtml",
         "matchingAllImg",
         "scrollAnimation",
