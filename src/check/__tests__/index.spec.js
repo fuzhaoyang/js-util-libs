@@ -14,7 +14,8 @@ describe("常用校验方法", () => {
             isIdCard,
             isIpv4,
             checkNum,
-            isEmptyObject
+            isEmptyObject,
+            bankCardCheck
         } = require("../index");
         // 邮箱测试
         expect(isEmail("932647051@qq.com")).toBe(true);
@@ -68,9 +69,13 @@ describe("常用校验方法", () => {
         expect(checkNum(5)).toBe(true);
         expect(checkNum("66")).toBe(false);
 
-         //判断是否为{}空对象
-         expect(isEmptyObject({})).toBe(true);
-         expect(isEmptyObject("66")).toBe(false);
-         expect(isEmptyObject({a:4})).toBe(false);
+        //判断是否为{}空对象
+        expect(isEmptyObject({})).toBe(true);
+        expect(isEmptyObject("66")).toBe(false);
+        expect(isEmptyObject({ a: 4 })).toBe(false);
+
+        // 银行卡号码校验（luhn算法）
+        expect(bankCardCheck(4485275742308327)).toBe(true);
+        expect(bankCardCheck(6011329933655299)).toBe(false);
     });
 });

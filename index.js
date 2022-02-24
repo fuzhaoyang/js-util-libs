@@ -70,7 +70,7 @@ from "./flat/index.js";
 export { unique }
 from "./unique/index.js";
 
-// 邮箱 手机号 URL 微信号 qq号 车牌号 密码强度校验 是否含中文 邮编号 16进制颜色 身份证号 ipv4 数字 对象 空对象 数组 基本数据类型
+// 邮箱 手机号 URL 微信号 qq号 车牌号 密码强度校验 是否含中文 邮编号 16进制颜色 身份证号 ipv4 数字 对象 空对象 数组 基本数据类型 银行卡号码校验（luhn算法）
 export {
     isEmail,
     isPhone,
@@ -82,6 +82,7 @@ export {
     isCn,
     isPostNo,
     isRGB,
+    bankCardCheck,
     isIdCard,
     isIpv4,
     checkNum,

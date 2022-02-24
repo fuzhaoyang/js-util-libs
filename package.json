@@ -53,6 +53,7 @@
         "isRGB",
         "isIdCard",
         "isIpv4",
+        "bankCardCheck",
         "getOSType",
         "cliboard",
         "checkBrowser",

@@ -80,20 +80,35 @@ exports.isIpv4 = (s) => {
  *  判断是否是数字
  * @param {Number} data
  */
- exports.checkNum = value => {
-    return typeof value === 'number' && !isNaN(value);
- }
+exports.checkNum = (value) => {
+    return typeof value === "number" && !isNaN(value);
+};
 
- //判断是否为对象
- const isObject = val =>
-   typeof val === "function" || (typeof val === "object" && !!val);
- exports.isObject = isObject;
+//判断是否为对象
+const isObject = (val) =>
+    typeof val === "function" || (typeof val === "object" && !!val);
+exports.isObject = isObject;
 
- //判断是否为{}空对象
- exports.isEmptyObject = val => isObject(val) && JSON.stringify(val) == "{}";
+//判断是否为{}空对象
+exports.isEmptyObject = (val) => isObject(val) && JSON.stringify(val) == "{}";
 
- //判断是否为数组
-exports.isArray = val => Array.isArray(val);
+//判断是否为数组
+exports.isArray = (val) => Array.isArray(val);
 
 // 判断当前数据类型
-exports.isType = value => Object.prototype.toString.call(value).slice(8,-1);
+exports.isType = (value) => Object.prototype.toString.call(value).slice(8, -1);
+
+// 银行卡号码校验（luhn算法）
+exports.bankCardCheck = (num) => {
+    let arr = (num + "")
+        .split("")
+        .reverse()
+        .map((x) => parseInt(x));
+    let lastDigit = arr.splice(0, 1)[0];
+    let sum = arr.reduce(
+        (acc, val, i) => (i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9) || 9),
+        0
+    );
+    sum += lastDigit;
+    return sum % 10 === 0;
+};
