@@ -140,3 +140,7 @@ from "./formatSize/index.js";
 // 加载样式文件
 export { loadStyle }
 from "./loadStyle/index.js";
+
+// 扁平数据结构转Tree
+export { arrayToTree }
+from "./array/index.js";

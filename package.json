@@ -74,7 +74,8 @@
         "thousandth",
         "changeToChinese",
         "formatSize",
-        "loadStyle"
+        "loadStyle",
+        "arrayToTree"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {

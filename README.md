@@ -72,7 +72,9 @@ npm install js-util-libs --save
 
     20、文件大小格式化 (B,KB,MB,GB)  
 
-    21、动态加载外部样式文件    
+    21、动态加载外部样式文件  
+
+    22、扁平数据结构转Tree    
 
     22、Base64 
 
