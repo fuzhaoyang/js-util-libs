@@ -76,19 +76,19 @@ npm install js-util-libs --save
 
     22、扁平数据结构转Tree    
 
-    22、Base64 
+    23、Base64 
 
         1.加密  
 
         2.解密  
 
-    23、UTF-8 
+    24、UTF-8 
 
         1.加密  
 
         2.解密  
 
-    24、cookie  
+    25、cookie  
 
         1.设置
 
@@ -97,7 +97,7 @@ npm install js-util-libs --save
         3.移除  
 
 
-    25、常用校验  
+    26、常用校验  
 
         1.邮箱校验  
 
