@@ -15,7 +15,7 @@ export { call, apply, bind }
 from "./src/call-apply-bind/index.js";
 
 // 时间戳转时间格式 YYYY-mm-dd HH:MM：SS
-export { dateFormat }
+export { dateFormat, beforeDateFormat }
 from "./dateFormat/index.js";
 
 // 转义字符转为前端展示字符号
@@ -113,29 +113,29 @@ export { getHtmlText }
 from "./getHtmlText/index.js";
 
 //实现base64解码加密
-export { base64Decode ,base64Encode } 
+export { base64Decode, base64Encode }
 from "./base64/index.js";
 
 //实现utf-8解码加密
-export { utf8Decode ,utf8Encode } 
+export { utf8Decode, utf8Encode }
 from "./base64/index.js";
 
 //去除空格
-export { trim } 
-from "./trim/index.js"; 
+export { trim }
+from "./trim/index.js";
 
 // 数字千分位分割
-export { thousandth } 
+export { thousandth }
 from "./thousandth/index.js";
 
 // 将数字转换为大写金额
-export { changeToChinese } 
+export { changeToChinese }
 from "./changeToChinese/index.js";
 
 // 文件大小格式化
-export { formatSize } 
+export { formatSize }
 from "./formatSize/index.js";
 
 // 加载样式文件
-export { loadStyle } 
+export { loadStyle }
 from "./loadStyle/index.js";

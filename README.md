@@ -18,7 +18,11 @@ npm install js-util-libs --save
 
     4、call,apply,bind  
 
-    5、时间戳转时间格式  
+    5、时间戳转格式  
+        
+        1:YYYY-MM-DD HH:MM:SS  
+
+        2:刚刚、几天前、几个月前、几年前
 
     6、转义字符转换  
 

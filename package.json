@@ -24,6 +24,7 @@
         "bind",
         "call",
         "dateFormat",
+        "beforeDateFormat",
         "escapeHtml",
         "matchingAllImg",
         "scrollAnimation",
