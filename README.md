@@ -30,7 +30,11 @@ npm install js-util-libs --save
 
     7、匹配字符串中所有图片src  
 
-    8、滚动条滚动动画缓冲  
+    8、滚动条滚动  
+
+        1.动画缓冲(scrollAnimation)    
+
+        2.滚动页面到顶部(scrollToTop)    
 
     9、异步加载外部多个js(动态插入)  
 

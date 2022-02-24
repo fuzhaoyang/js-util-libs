@@ -27,7 +27,7 @@ export { matchingAllImg }
 from "./matchingAllImg/index.js";
 
 // 原生实现鼠标滚动动画缓冲
-export { scrollAnimation }
+export { scrollAnimation, scrollToTop }
 from "./scrollAnimation/index.js";
 
 //  异步加载多个外部js方案
