@@ -163,7 +163,8 @@ npm install js-util-libs --save
 4、packjson keywords 里写自己函数关键字  
 5、npm test 跑测试用例  
 6、不要修改 packjson 版本号，版本号为线上最新用户使用版本  
-7、Pull requests 测试用例过后，静等作者合代码
+7、Pull requests 测试用例过后，静等作者合代码  
+8、代码合并后，作者会及时发布在npm上，更新修复版本
 
 ## Contact me(联系我)
 
