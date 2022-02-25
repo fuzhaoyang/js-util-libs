@@ -112,3 +112,9 @@ exports.bankCardCheck = (num) => {
     sum += lastDigit;
     return sum % 10 === 0;
 };
+
+// 验证版本号格式必须为X.Y.Z 
+/**
+ *  @param { string } value
+ */
+ exports.isVersion = value => /^\d+(?:\.\d+){2}$/g.test(value);

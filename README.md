@@ -150,6 +150,8 @@ npm install js-util-libs --save
 
         18、银行卡号码校验（luhn算法）
 
+        19.验证版本号格式必须为X.Y.Z
+
 ## 欢迎大家提 PR 扩充函数库，为开源社区贡献自己一份力
 
 提 Pr 步骤  

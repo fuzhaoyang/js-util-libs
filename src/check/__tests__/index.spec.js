@@ -15,7 +15,8 @@ describe("常用校验方法", () => {
             isIpv4,
             checkNum,
             isEmptyObject,
-            bankCardCheck
+            bankCardCheck,
+            isVersion
         } = require("../index");
         // 邮箱测试
         expect(isEmail("932647051@qq.com")).toBe(true);
@@ -77,5 +78,9 @@ describe("常用校验方法", () => {
         // 银行卡号码校验（luhn算法）
         expect(bankCardCheck(4485275742308327)).toBe(true);
         expect(bankCardCheck(6011329933655299)).toBe(false);
+
+        // 验证版本号格式必须为X.Y.Z 
+        expect(isVersion('1.1.0')).toBe(true);
+        expect(isVersion('12.52.522.522')).toBe(false);
     });
 });
