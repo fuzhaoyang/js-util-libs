@@ -28,3 +28,8 @@ exports.scrollToTop = () => {
         window.scrollTo(0, scrollTop - scrollTop / 8);
     }
 };
+
+// 滚动到页面底部  
+exports.scrollToBottom = () => {
+  window.scrollTo(0, document.documentElement.clientHeight);  
+}

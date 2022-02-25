@@ -52,6 +52,8 @@ npm install js-util-libs --save
 
         2.滚动页面到顶部(scrollToTop)
 
+        3.滚动页面到底部（scrollToBottom)
+
     21、时间戳转格式
 
         1:YYYY-MM-DD HH:MM:SS

@@ -81,7 +81,8 @@
         "randomRange",
         "randomNum",
         "digitUppercase",
-        "telFormat"
+        "telFormat",
+        "scrollToBottom"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git"
 }

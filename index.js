@@ -26,8 +26,8 @@ from "./src/escapeHtml/index.js";
 export { matchingAllImg }
 from "./src/matchingAllImg/index.js";
 
-// 原生实现鼠标滚动动画缓冲
-export { scrollAnimation, scrollToTop }
+// 原生实现鼠标滚动动画缓冲  滚动到底部 滚动到底部
+export { scrollAnimation, scrollToTop ,scrollToBottom}
 from "./src/scrollAnimation/index.js";
 
 //  异步加载多个外部js方案
