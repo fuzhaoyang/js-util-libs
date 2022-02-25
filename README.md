@@ -56,7 +56,15 @@ npm install js-util-libs --save
 
         3:星期几
 
-    20、6种排序方式
+    20、随机数
+
+        1:指定长度随机字符串
+
+        2:范围内随机数
+
+        3:数组取随机数
+
+    21、6种排序方式
 
         1：冒泡排序
 
@@ -70,7 +78,7 @@ npm install js-util-libs --save
 
         6：选择排序
 
-    21、数组
+    22、数组
 
         1.扁平数据结构转Tree
 
@@ -78,19 +86,19 @@ npm install js-util-libs --save
 
         3.扁平化（降维）
 
-    22、Base64
+    23、Base64
 
         1.加密
 
         2.解密
 
-    23、UTF-8
+    24、UTF-8
 
         1.加密
 
         2.解密
 
-    24、cookie
+    25、cookie
 
         1.设置
 
@@ -98,7 +106,7 @@ npm install js-util-libs --save
 
         3.移除
 
-    25、常用校验
+    26、常用校验
 
         1.邮箱校验
 
