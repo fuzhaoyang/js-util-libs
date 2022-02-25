@@ -80,7 +80,8 @@
         "randomString",
         "randomRange",
         "randomNum",
-        "digitUppercase"
+        "digitUppercase",
+        "telFormat"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git"
 }

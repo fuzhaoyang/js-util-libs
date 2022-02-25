@@ -142,3 +142,6 @@ export  { randomString, randomRange, randomNum } from "./src/random/index.js"
 
 // 数字转为大写金额
 export { digitUppercase } from "./src/digitUppercase/index.js"
+
+// 手机号中间四位变*
+export { telFormat } from "./src/common/index.js"

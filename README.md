@@ -44,13 +44,15 @@ npm install js-util-libs --save
 
     18、获取地址栏url参数
 
-    19、滚动条滚动
+    19、手机号中间四位变成* (177****698)
+
+    20、滚动条滚动
 
         1.动画缓冲(scrollAnimation)
 
         2.滚动页面到顶部(scrollToTop)
 
-    20、时间戳转格式
+    21、时间戳转格式
 
         1:YYYY-MM-DD HH:MM:SS
 
@@ -58,7 +60,7 @@ npm install js-util-libs --save
 
         3:星期几
 
-    21、随机数
+    22、随机数
 
         1:指定长度随机字符串
 
@@ -66,7 +68,7 @@ npm install js-util-libs --save
 
         3:数组取随机数
 
-    22、6种排序方式
+    23、6种排序方式
 
         1：冒泡排序
 
@@ -80,7 +82,7 @@ npm install js-util-libs --save
 
         6：选择排序
 
-    23、数组
+    24、数组
 
         1.扁平数据结构转Tree
 
@@ -88,19 +90,19 @@ npm install js-util-libs --save
 
         3.扁平化（降维）
 
-    24、Base64
+    25、Base64
 
         1.加密
 
         2.解密
 
-    25、UTF-8
+    26、UTF-8
 
         1.加密
 
         2.解密
 
-    26、cookie
+    27、cookie
 
         1.设置
 
@@ -108,7 +110,7 @@ npm install js-util-libs --save
 
         3.移除
 
-    27、常用校验
+    28、常用校验
 
         1.邮箱校验
 
