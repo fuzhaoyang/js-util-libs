@@ -34,21 +34,23 @@ npm install js-util-libs --save
 
     13、将阿拉伯数字翻译成中文的大写数字(五仟二百二十二)
 
-    14、文件大小格式化 (B,KB,MB,GB)
+    14、数字转为大写金额 （壹仟零伍拾贰万玖仟伍佰贰拾元整）
 
-    15、动态加载外部样式文件
+    15、文件大小格式化 (B,KB,MB,GB)
 
-    16、异步加载外部多个js(动态插入)
+    16、动态加载外部样式文件
 
-    17、获取地址栏url参数
+    17、异步加载外部多个js(动态插入)
 
-    18、滚动条滚动
+    18、获取地址栏url参数
+
+    19、滚动条滚动
 
         1.动画缓冲(scrollAnimation)
 
         2.滚动页面到顶部(scrollToTop)
 
-    19、时间戳转格式
+    20、时间戳转格式
 
         1:YYYY-MM-DD HH:MM:SS
 
@@ -56,7 +58,7 @@ npm install js-util-libs --save
 
         3:星期几
 
-    20、随机数
+    21、随机数
 
         1:指定长度随机字符串
 
@@ -64,7 +66,7 @@ npm install js-util-libs --save
 
         3:数组取随机数
 
-    21、6种排序方式
+    22、6种排序方式
 
         1：冒泡排序
 
@@ -78,7 +80,7 @@ npm install js-util-libs --save
 
         6：选择排序
 
-    22、数组
+    23、数组
 
         1.扁平数据结构转Tree
 
@@ -86,19 +88,19 @@ npm install js-util-libs --save
 
         3.扁平化（降维）
 
-    23、Base64
+    24、Base64
 
         1.加密
 
         2.解密
 
-    24、UTF-8
+    25、UTF-8
 
         1.加密
 
         2.解密
 
-    25、cookie
+    26、cookie
 
         1.设置
 
@@ -106,7 +108,7 @@ npm install js-util-libs --save
 
         3.移除
 
-    26、常用校验
+    27、常用校验
 
         1.邮箱校验
 

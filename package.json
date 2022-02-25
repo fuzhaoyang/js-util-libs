@@ -1,7 +1,7 @@
 {
     "name": "js-util-libs",
     "description": "js常见的函数工具库",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "author": "fuzhaoyang <932647051@qq.com>",
     "license": "MIT",
     "main": "index.js",
@@ -79,17 +79,8 @@
         "arrayToTree",
         "randomString",
         "randomRange",
-        "randomNum"
+        "randomNum",
+        "digitUppercase"
     ],
-    "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/fuzhaoyang/js-util-libs.git"
-    },
-    "dependencies": {
-        "jest": "^26.0.1"
-    },
-    "devDependencies": {
-        "husky": "7.0.2"
-    }
+    "homepage": "https://github.com/fuzhaoyang/js-util-libs.git"
 }

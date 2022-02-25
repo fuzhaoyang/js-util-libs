@@ -138,5 +138,7 @@ export { arrayToTree , arrScrambling, unique, flat}
 from "./src/array/index.js";
 
 // 1、指定范围随机数  2、随机长度字符串 3、数组随机数
-
 export  { randomString, randomRange, randomNum } from "./src/random/index.js"
+
+// 数字转为大写金额
+export { digitUppercase } from "./src/digitUppercase/index.js"
