@@ -83,7 +83,8 @@
         "digitUppercase",
         "telFormat",
         "scrollToBottom",
-        "isVersion"
+        "isVersion",
+        "isPassport"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git"
 }

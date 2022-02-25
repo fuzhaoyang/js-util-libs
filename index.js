@@ -82,7 +82,8 @@ export {
     isEmptyObject,
     isArray,
     isType,
-    isVersion
+    isVersion,
+    isPassport
 }
 from "./src/check/index.js";
 

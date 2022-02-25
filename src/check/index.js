@@ -118,3 +118,6 @@ exports.bankCardCheck = (num) => {
  *  @param { string } value
  */
  exports.isVersion = value => /^\d+(?:\.\d+){2}$/g.test(value);
+
+ // 验证护照（包含香港、澳门）
+ exports.isPassport = value => /(^[EeKkGgDdSsPpHh]\d{8}$)|(^(([Ee][a-fA-F])|([DdSsPp][Ee])|([Kk][Jj])|([Mm][Aa])|(1[45]))\d{7}$)/g.test(value);
