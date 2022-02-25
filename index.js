@@ -62,14 +62,6 @@ from "./sort/quick_sort/index.js";
 export { selectionSort }
 from "./sort/selection_sort/index.js";
 
-// 数组扁平化
-export { flat }
-from "./flat/index.js";
-
-// 数组去重
-export { unique }
-from "./unique/index.js";
-
 // 邮箱 手机号 URL 微信号 qq号 车牌号 密码强度校验 是否含中文 邮编号 16进制颜色 身份证号 ipv4 数字 对象 空对象 数组 基本数据类型 银行卡号码校验（luhn算法）
 export {
     isEmail,
@@ -141,6 +133,6 @@ from "./formatSize/index.js";
 export { loadStyle }
 from "./loadStyle/index.js";
 
-// 扁平数据结构转Tree
-export { arrayToTree }
+// 扁平数据结构转Tree  数组乱序  去重 扁平化
+export { arrayToTree , arrScrambling, unique, flat}
 from "./array/index.js";

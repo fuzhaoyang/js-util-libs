@@ -1,34 +1,17 @@
-// 扁平数据结构转Tree
-exports.arrayToTree = (items) => {
-    const result = []; // 存放结果集
-    const itemMap = {}; //
-    for (const item of items) {
-        const id = item.id;
-        const pid = item.pid;
+// 数组乱序 
+exports.arrScrambling = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    const randomIndex = Math.round(Math.random() * (arr.length - 1 - i)) + i;
+    [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
+  }
+  return arr;
+}
 
-        if (!itemMap[id]) {
-            itemMap[id] = {
-                children: [],
-            };
-        }
+// 数组去重
+export { unique } from "./unique/index.js"
 
-        itemMap[id] = {
-            ...item,
-            children: itemMap[id]["children"],
-        };
+// 数组扁平化（降维）
+export { flat } from "./flat/index.js"
 
-        const treeItem = itemMap[id];
-
-        if (pid === 0) {
-            result.push(treeItem);
-        } else {
-            if (!itemMap[pid]) {
-                itemMap[pid] = {
-                    children: [],
-                };
-            }
-            itemMap[pid].children.push(treeItem);
-        }
-    }
-    return result;
-};
+// 数组扁平化（降维）
+export { arrayToTree } from "./arrayToTree/index.js"

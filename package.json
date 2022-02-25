@@ -41,6 +41,7 @@
         "shallCopy",
         "flat",
         "unique",
+        "arrScrambling",
         "isEmail",
         "isPhone",
         "isURL",
