@@ -147,8 +147,8 @@ from "./src/random/index.js"
 export { digitUppercase }
 from "./src/digitUppercase/index.js"
 
-// 手机号中间四位变*
-export { telFormat }
+// 手机号中间四位变*  字符串首字母大写
+export { telFormat, fistLetterUpper }
 from "./src/common/index.js"
 
 // 大数相加 大数相乘

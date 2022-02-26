@@ -86,7 +86,8 @@
         "isVersion",
         "isPassport",
         "largeNumberAdd",
-        "largeNumbersMultiply"
+        "largeNumbersMultiply",
+        "fistLetterUpper"
     ],
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
