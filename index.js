@@ -27,7 +27,7 @@ export { matchingAllImg }
 from "./src/matchingAllImg/index.js";
 
 // 原生实现鼠标滚动动画缓冲  滚动到底部 滚动到底部
-export { scrollAnimation, scrollToTop ,scrollToBottom}
+export { scrollAnimation, scrollToTop, scrollToBottom }
 from "./src/scrollAnimation/index.js";
 
 //  异步加载多个外部js方案
@@ -136,14 +136,21 @@ export { loadStyle }
 from "./src/loadStyle/index.js";
 
 // 扁平数据结构转Tree  数组乱序  去重 扁平化
-export { arrayToTree , arrScrambling, unique, flat}
+export { arrayToTree, arrScrambling, unique, flat }
 from "./src/array/index.js";
 
 // 1、指定范围随机数  2、随机长度字符串 3、数组随机数
-export  { randomString, randomRange, randomNum } from "./src/random/index.js"
+export { randomString, randomRange, randomNum }
+from "./src/random/index.js"
 
 // 数字转为大写金额
-export { digitUppercase } from "./src/digitUppercase/index.js"
+export { digitUppercase }
+from "./src/digitUppercase/index.js"
 
 // 手机号中间四位变*
-export { telFormat } from "./src/common/index.js"
+export { telFormat }
+from "./src/common/index.js"
+
+// 大数相加 大数相乘
+export { largeNumberAdd, largeNumbersMultiply }
+from "./src/number/index.js"
