@@ -92,7 +92,7 @@
     "homepage": "https://github.com/fuzhaoyang/js-util-libs.git",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fuzhaoyang/js-util-libs.git"
+        "url": "git+https://github.com/fuzhaoyang/js-util-libs.git"
     },
     "dependencies": {
         "jest": "^26.0.1"
