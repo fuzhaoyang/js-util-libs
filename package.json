@@ -1,7 +1,7 @@
 {
     "name": "js-util-libs",
     "description": "js常见的函数工具库",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "author": "fuzhaoyang <932647051@qq.com>",
     "license": "MIT",
     "main": "index.js",
