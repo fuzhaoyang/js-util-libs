@@ -95,7 +95,7 @@
         "url": "git+https://github.com/fuzhaoyang/js-util-libs.git"
     },
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/js-util-libs"
+        "registry": "https://registry.npmjs.org"
     },
     "dependencies": {
         "jest": "^26.0.1"
