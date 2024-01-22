@@ -164,8 +164,19 @@ npm install js-util-libs --save
         19.验证版本号格式必须为X.Y.Z
 
         20.验证护照（包含香港、澳门）
-
+## 如何使用
+``` language
+import { deepCopy } from 'js-util-libs';
+```
+``` language
+const obj = {
+  aa: 1,
+  b: '52'
+};
+const text = deepCopy(obj);
+```
 ## 欢迎大家提 PR 扩充函数库，为开源社区贡献自己一份力
+git仓库连接：https://github.com/fuzhaoyang/js-util-libs
 
 提 Pr 步骤  
 1、src 底下创建自己模块函数的文件夹  
@@ -183,11 +194,8 @@ npm install js-util-libs --save
 
 ## 我的博客
 
-https://code-nav.top/myblog/home
+https://code-nav.top/blog
 
-## 我的编程导航
-
-https://code-nav.top/code-nav/home
 ![image](https://user-images.githubusercontent.com/25168173/154791015-750d04e4-02d4-4ebb-a559-5e3331003309.png)
 
 ## License
