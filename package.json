@@ -1,7 +1,7 @@
 {
     "name": "js-util-libs",
     "description": "js常见的函数工具库",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "author": "fuzhaoyang <932647051@qq.com>",
     "license": "MIT",
     "main": "index.js",
@@ -95,7 +95,7 @@
         "url": "git+https://github.com/fuzhaoyang/js-util-libs.git"
     },
     "publishConfig": {
-        "registry": "https://registry.npmjs.org"
+        "registry": "https://registry.npmjs.org/"
     },
     "dependencies": {
         "jest": "^26.0.1"

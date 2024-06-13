@@ -117,7 +117,7 @@ from "./src/base64/index.js";
 
 //去除空格
 export { trim }
-from "./trim/index.js";
+from "./src/trim/index.js";
 
 // 数字千分位分割
 export { thousandth }
