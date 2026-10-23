@@ -21,7 +21,7 @@ exports.checkBrowser = () => {
     } : 0 <= t.indexOf("opera") ? {
         type: "Opera",
         version: Number(t.match(/opera.([\d]+)/)[1])
-    } : 0 <= t.indexOf("Safari") ? {
+    } : 0 <= t.indexOf("safari") ? {
         type: "Safari",
         version: Number(t.match(/version\/([\d]+)/)[1])
     } : {

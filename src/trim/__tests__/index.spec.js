@@ -10,5 +10,7 @@ describe("去除空格", () => {
         expect(trim(str,2)).toEqual('asasa asasa asasa');
         expect(trim(str,3)).toEqual('asasa asasa asasa ');
         expect(trim(str,4)).toEqual(' asasa asasa asasa');
+        expect(trim('abc   ', 3)).toEqual('abc   ');
+        expect(trim('abc   ', 4)).toEqual('abc');
     });
 });

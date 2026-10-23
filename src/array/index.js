@@ -1,4 +1,4 @@
-// 数组乱序 
+// 数组乱序
 exports.arrScrambling = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     const randomIndex = Math.round(Math.random() * (arr.length - 1 - i)) + i;
@@ -8,10 +8,10 @@ exports.arrScrambling = (arr) => {
 }
 
 // 数组去重
-export { unique } from "./unique/index.js"
+exports.unique = require("./unique/index.js").unique;
 
 // 数组扁平化（降维）
-export { flat } from "./flat/index.js"
+exports.flat = require("./flat/index.js").flat;
 
-// 数组扁平化（降维）
-export { arrayToTree } from "./arrayToTree/index.js"
+// 扁平数据结构转 Tree
+exports.arrayToTree = require("./arrayToTree/index.js").arrayToTree;

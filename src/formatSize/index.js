@@ -2,7 +2,7 @@
 exports.formatSize = (size) => {
     const unitsHash = 'B,KB,MB,GB'.split(',')
     let index = 0
-    while (size > 1024 && index < unitsHash.length) {
+    while (size > 1024 && index < unitsHash.length - 1) {
         size /= 1024
         index++
     }

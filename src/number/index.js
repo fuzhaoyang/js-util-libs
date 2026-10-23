@@ -2,10 +2,11 @@ const { isType } = require("../check/index");
 
 // 大数相加
 exports.largeNumberAdd = (a, b) => {
-    if (isType(a) !== 'String' || isType(a) !== 'String') {
-        console.error('大数相乘参数请传字符串数字');
+    if (isType(a) !== 'String' || isType(b) !== 'String') {
+        console.error('大数相加参数请传字符串数字');
         return;
     }
+    if (isNaN(a) || isNaN(b)) return "";
     //取两个数字的最大长度
     let maxLength = Math.max(a.length, b.length);
     //用0去补齐长度
@@ -29,7 +30,7 @@ exports.largeNumberAdd = (a, b) => {
 // 大数相乘
 exports.largeNumbersMultiply = (num1, num2) => {
     if (isType(num1) !== 'String' || isType(num2) !== 'String') {
-        console.error('大数相加参数请传字符串数字');
+        console.error('大数相乘参数请传字符串数字');
         return;
     }
     if (isNaN(num1) || isNaN(num2)) return "";

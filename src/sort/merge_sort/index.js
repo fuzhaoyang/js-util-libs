@@ -1,5 +1,6 @@
 // 归并排序
 function mergeSort(nums) {
+  if (!Array.isArray(nums)) return;
   if (nums.length <= 1) return nums;
   const pivot = nums.length >> 1;
   return merge(mergeSort(nums.slice(0, pivot)), mergeSort(nums.slice(pivot)));

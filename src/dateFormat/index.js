@@ -44,6 +44,7 @@ exports.beforeDateFormat = function(current) {
     let diffHour = diffValue / hour;
     let diffMinute = diffValue / minute;
     let diffYear = diffValue / year;
+    let result;
     if (diffValue < 0) {
         result = "刚刚";
     } else if (diffYear > 1) {

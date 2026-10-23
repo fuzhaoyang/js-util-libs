@@ -7,7 +7,7 @@ exports.isEmail = (s) => {
 
 // 是否手机号
 exports.isPhone = (s) => {
-    const phoneReg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+    const phoneReg = /^1[3-9]\d{9}$/;
     return phoneReg.test(s);
 };
 
@@ -39,7 +39,7 @@ exports.isCarNo = (s) => {
 
 // 密码强度校验 密码中必须包含字母、数字、特称字符，至少8个字符，最多30个字符
 exports.password = (s) => {
-    const passwordReg = /(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,30}/;
+    const passwordReg = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,30}$/;
     return passwordReg.test(s);
 };
 

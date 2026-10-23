@@ -57,6 +57,8 @@
         "bankCardCheck",
         "getOSType",
         "cliboard",
+        "clipboard",
+        "firstLetterUpper",
         "checkBrowser",
         "cookieSet",
         "cookieGet",
@@ -97,10 +99,7 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
     },
-    "dependencies": {
-        "jest": "^26.0.1"
-    },
     "devDependencies": {
-        "husky": "7.0.2"
+        "jest": "^26.0.1"
     }
 }

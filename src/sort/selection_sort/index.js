@@ -1,4 +1,7 @@
 function selectionSort(arr) {
+    if (!Array.isArray(arr)) {
+      return;
+    }
     for (let i = 0; i < arr.length; i++) {
       let minIndex = i;
       for (let j = i + 1; j < arr.length; j++) {
