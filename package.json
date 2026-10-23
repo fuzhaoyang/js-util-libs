@@ -5,10 +5,6 @@
     "author": "fuzhaoyang <932647051@qq.com>",
     "license": "MIT",
     "main": "index.js",
-    "files": [
-        "index.js",
-        "src"
-    ],
     "private": false,
     "scripts": {
         "test": "jest",
