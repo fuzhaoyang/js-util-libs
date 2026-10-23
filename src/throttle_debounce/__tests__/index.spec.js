@@ -73,3 +73,38 @@ it("防抖Debounce", (done) => {
     done();
   }, 50);
 });
+
+describe("debounce 扩展", () => {
+  it("cancel 后不再执行", (done) => {
+    const { debounce } = require("../index");
+    const fn = jest.fn();
+    const debounced = debounce(fn, 10);
+    debounced(1);
+    debounced.cancel();
+    setTimeout(() => {
+      expect(fn).not.toHaveBeenCalled();
+      done();
+    }, 30);
+  });
+
+  it("flush 立即执行", () => {
+    const { debounce } = require("../index");
+    const fn = jest.fn();
+    const debounced = debounce(fn, 1000);
+    debounced(1);
+    debounced.flush();
+    expect(fn).toHaveBeenCalledWith(1);
+  });
+
+  it("leading 为 true 时首次立即执行", (done) => {
+    const { debounce } = require("../index");
+    const fn = jest.fn();
+    const debounced = debounce(fn, 10, { leading: true });
+    debounced(1);
+    expect(fn).toHaveBeenCalledTimes(1);
+    setTimeout(() => {
+      expect(fn).toHaveBeenCalledTimes(1);
+      done();
+    }, 30);
+  });
+});

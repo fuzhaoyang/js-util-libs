@@ -5,3 +5,16 @@ describe("转义字符转换", () => {
         expect(escapeHtml(str)).toEqual(" <>&      \"·¦—–≥≤«»°•¯@“”‚‘'");
     });
 });
+describe("HTML 编解码", () => {
+    const { encodeHtml, unescapeHtml } = require("../index");
+
+    it("encodeHtml", () => {
+        expect(encodeHtml('<a href="x">&\'</a>')).toBe(
+            "&lt;a href=&quot;x&quot;&gt;&amp;&#39;&lt;/a&gt;"
+        );
+    });
+
+    it("unescapeHtml 是 escapeHtml 的别名", () => {
+        expect(unescapeHtml("&lt;p&gt;")).toBe("<p>");
+    });
+});

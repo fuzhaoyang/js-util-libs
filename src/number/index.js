@@ -50,3 +50,70 @@ exports.largeNumbersMultiply = (num1, num2) => {
     }
     return result.join("").replace(/^0+/, "");
 };
+// 限制数值范围
+exports.clamp = (n, min, max) => Math.min(Math.max(n, min), max);
+
+exports.sum = (arr) => arr.reduce((total, value) => total + value, 0);
+
+exports.average = (arr) => (arr.length ? exports.sum(arr) / arr.length : NaN);
+
+const decimalPlaces = (n) => {
+    const text = String(n);
+    const index = text.indexOf(".");
+    return index === -1 ? 0 : text.length - index - 1;
+};
+
+// 四舍五入，规避浮点误差
+exports.round = (n, precision = 0) => {
+    const factor = Math.pow(10, precision);
+    const rounded = Math.round(Math.abs(n) * factor * (1 + Number.EPSILON));
+    return (Math.sign(n) * rounded) / factor;
+};
+
+// 精确加减乘除，规避 0.1 + 0.2 这类浮点误差
+exports.add = (a, b) => {
+    const factor = Math.pow(10, Math.max(decimalPlaces(a), decimalPlaces(b)));
+    return (Math.round(a * factor) + Math.round(b * factor)) / factor;
+};
+
+exports.sub = (a, b) => {
+    const factor = Math.pow(10, Math.max(decimalPlaces(a), decimalPlaces(b)));
+    return (Math.round(a * factor) - Math.round(b * factor)) / factor;
+};
+
+exports.mul = (a, b) => {
+    const aPlaces = decimalPlaces(a);
+    const bPlaces = decimalPlaces(b);
+    return (
+        (Math.round(a * Math.pow(10, aPlaces)) *
+            Math.round(b * Math.pow(10, bPlaces))) /
+        Math.pow(10, aPlaces + bPlaces)
+    );
+};
+
+exports.div = (a, b) => {
+    const factor = Math.pow(10, Math.max(decimalPlaces(a), decimalPlaces(b)));
+    return Math.round(a * factor) / Math.round(b * factor);
+};
+
+// 金额格式化，默认 ¥1,234.56
+exports.formatCurrency = (amount, options = {}) => {
+    const { symbol = "¥", decimals = 2, thousands = true } = options;
+    const value = Number(amount);
+    if (Number.isNaN(value)) return "";
+    const fixed = value.toFixed(decimals);
+    const negative = fixed.startsWith("-");
+    const [integer, decimal] = (negative ? fixed.slice(1) : fixed).split(".");
+    const digits = thousands
+        ? integer.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        : integer;
+    return `${negative ? "-" : ""}${symbol}${digits}${decimals > 0 ? `.${decimal}` : ""}`;
+};
+
+// 金额字符串转数字，如 "¥1,234.56" -> 1234.56
+exports.parseMoney = (value) => {
+    if (typeof value === "number") return value;
+    const cleaned = String(value).replace(/[^\d.-]/g, "");
+    if (cleaned === "" || Number.isNaN(Number(cleaned))) return NaN;
+    return Number(cleaned);
+};

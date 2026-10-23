@@ -139,3 +139,91 @@ exports.fistLetterUpper = exports.firstLetterUpper;
 // 大数相加 大数相乘
 exports.largeNumberAdd = require("./src/number/index.js").largeNumberAdd;
 exports.largeNumbersMultiply = require("./src/number/index.js").largeNumbersMultiply;
+
+// 异步工具
+exports.sleep = require("./src/async/index.js").sleep;
+exports.retry = require("./src/async/index.js").retry;
+exports.withTimeout = require("./src/async/index.js").withTimeout;
+
+// 函数工具
+exports.memoize = require("./src/function/index.js").memoize;
+exports.once = require("./src/function/index.js").once;
+
+// 对象工具
+exports.pick = require("./src/object/index.js").pick;
+exports.omit = require("./src/object/index.js").omit;
+exports.get = require("./src/object/index.js").get;
+exports.set = require("./src/object/index.js").set;
+exports.deepMerge = require("./src/object/index.js").deepMerge;
+exports.deepEqual = require("./src/object/index.js").deepEqual;
+
+// 字符串工具
+exports.escapeRegExp = require("./src/string/index.js").escapeRegExp;
+exports.camelCase = require("./src/string/index.js").camelCase;
+exports.kebabCase = require("./src/string/index.js").kebabCase;
+exports.truncate = require("./src/string/index.js").truncate;
+
+// 数组扩展
+exports.chunk = require("./src/array/index.js").chunk;
+exports.groupBy = require("./src/array/index.js").groupBy;
+exports.sortBy = require("./src/array/index.js").sortBy;
+
+// 数字扩展
+exports.clamp = require("./src/number/index.js").clamp;
+exports.sum = require("./src/number/index.js").sum;
+exports.average = require("./src/number/index.js").average;
+exports.round = require("./src/number/index.js").round;
+exports.add = require("./src/number/index.js").add;
+exports.sub = require("./src/number/index.js").sub;
+exports.mul = require("./src/number/index.js").mul;
+exports.div = require("./src/number/index.js").div;
+exports.formatCurrency = require("./src/number/index.js").formatCurrency;
+exports.parseMoney = require("./src/number/index.js").parseMoney;
+
+// 校验扩展
+exports.isNil = require("./src/check/index.js").isNil;
+exports.isPromise = require("./src/check/index.js").isPromise;
+exports.isPlainObject = require("./src/check/index.js").isPlainObject;
+exports.isEmpty = require("./src/check/index.js").isEmpty;
+exports.isCreditCode = require("./src/check/index.js").isCreditCode;
+exports.isOrganizationCode = require("./src/check/index.js").isOrganizationCode;
+exports.isNewEnergyCarNo = require("./src/check/index.js").isNewEnergyCarNo;
+exports.getAge = require("./src/check/index.js").getAge;
+exports.getGender = require("./src/check/index.js").getGender;
+exports.getBankCardType = require("./src/check/index.js").getBankCardType;
+
+// 脱敏与 UUID
+exports.maskPhone = require("./src/common/index.js").maskPhone;
+exports.maskIdCard = require("./src/common/index.js").maskIdCard;
+exports.maskName = require("./src/common/index.js").maskName;
+exports.maskEmail = require("./src/common/index.js").maskEmail;
+exports.maskBankCard = require("./src/common/index.js").maskBankCard;
+exports.uuid = require("./src/common/index.js").uuid;
+
+// HTML 编解码
+exports.encodeHtml = require("./src/escapeHtml/index.js").encodeHtml;
+exports.unescapeHtml = require("./src/escapeHtml/index.js").unescapeHtml;
+
+// URL 查询参数
+exports.parseQuery = require("./src/query/index.js").parseQuery;
+exports.stringifyQuery = require("./src/query/index.js").stringifyQuery;
+exports.setQuery = require("./src/query/index.js").setQuery;
+exports.removeQuery = require("./src/query/index.js").removeQuery;
+
+// 本地存储
+exports.storageSet = require("./src/storage/index.js").storageSet;
+exports.storageGet = require("./src/storage/index.js").storageGet;
+exports.storageRemove = require("./src/storage/index.js").storageRemove;
+
+// DOM 工具
+exports.on = require("./src/dom/index.js").on;
+exports.off = require("./src/dom/index.js").off;
+exports.delegate = require("./src/dom/index.js").delegate;
+exports.isInViewport = require("./src/dom/index.js").isInViewport;
+exports.copyText = require("./src/dom/index.js").copyText;
+
+// 文件工具
+exports.downloadFile = require("./src/file/index.js").downloadFile;
+exports.readFileAsText = require("./src/file/index.js").readFileAsText;
+exports.blobToBase64 = require("./src/file/index.js").blobToBase64;
+exports.base64ToBlob = require("./src/file/index.js").base64ToBlob;

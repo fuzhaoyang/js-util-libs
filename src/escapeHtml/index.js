@@ -32,3 +32,18 @@ exports.escapeHtml = (str) => {
       }
     );
   };
+// HTML 实体解码（escapeHtml 的同义函数）
+exports.unescapeHtml = exports.escapeHtml;
+
+// HTML 特殊字符编码
+exports.encodeHtml = (str) =>
+    String(str).replace(/[&<>"']/g, (char) => {
+        const map = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;",
+        };
+        return map[char];
+    });

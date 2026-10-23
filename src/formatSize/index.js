@@ -1,8 +1,8 @@
 // 文件大小格式化
 exports.formatSize = (size) => {
-    const unitsHash = 'B,KB,MB,GB'.split(',')
+    const unitsHash = 'B,KB,MB,GB,TB,PB'.split(',')
     let index = 0
-    while (size > 1024 && index < unitsHash.length - 1) {
+    while (size >= 1024 && index < unitsHash.length - 1) {
         size /= 1024
         index++
     }

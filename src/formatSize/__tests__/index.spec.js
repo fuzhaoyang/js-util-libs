@@ -3,6 +3,9 @@ describe("文件大小格式化", () => {
     it("测试formatSize方法", () => {
         const { formatSize } = require("../index");
         expect(formatSize(152225454152)).toEqual('141.77GB');
-        expect(formatSize(1024 * 1024 * 1024 * 1024 * 2)).toEqual('2048GB');
+        expect(formatSize(1024)).toEqual('1KB');
+        expect(formatSize(1024 * 1024 * 1024 * 1024)).toEqual('1TB');
+        expect(formatSize(1024 * 1024 * 1024 * 1024 * 2)).toEqual('2TB');
+        expect(formatSize(1024 * 1024 * 1024 * 1024 * 1024)).toEqual('1PB');
     });
 });

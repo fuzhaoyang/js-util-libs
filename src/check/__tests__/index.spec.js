@@ -16,7 +16,17 @@ describe("常用校验方法", () => {
             checkNum,
             isEmptyObject,
             bankCardCheck,
-            isVersion
+            isVersion,
+            isCreditCode,
+            isOrganizationCode,
+            isNewEnergyCarNo,
+            isNil,
+            isPromise,
+            isPlainObject,
+            isEmpty,
+            getAge,
+            getGender,
+            getBankCardType
         } = require("../index");
         // 邮箱测试
         expect(isEmail("932647051@qq.com")).toBe(true);
@@ -59,7 +69,9 @@ describe("常用校验方法", () => {
         expect(isRGB("#1234567")).toBe(false);
 
         //身份证的校验
-        expect(isIdCard("415106199801012130")).toBe(true);
+        expect(isIdCard("11010519491231002X")).toBe(true);
+        expect(isIdCard("110105491231002")).toBe(true);
+        expect(isIdCard("415106199801012130")).toBe(false);
         expect(isIdCard("718381298381212183")).toBe(false);
 
         //IPv4的校验
@@ -82,5 +94,40 @@ describe("常用校验方法", () => {
         // 验证版本号格式必须为X.Y.Z 
         expect(isVersion('1.1.0')).toBe(true);
         expect(isVersion('12.52.522.522')).toBe(false);
+
+        // 统一社会信用代码
+        expect(isCreditCode('91350100M000100Y43')).toBe(true);
+        expect(isCreditCode('91350100M000100Y44')).toBe(false);
+
+        // 组织机构代码
+        expect(isOrganizationCode('12345678-8')).toBe(true);
+        expect(isOrganizationCode('12345678-9')).toBe(false);
+
+        // 新能源车牌
+        expect(isNewEnergyCarNo('粤BD12345')).toBe(true);
+        expect(isNewEnergyCarNo('粤B12345D')).toBe(true);
+        expect(isNewEnergyCarNo('粤B12345')).toBe(false);
+
+        // 空值判断
+        expect(isNil(null)).toBe(true);
+        expect(isNil(0)).toBe(false);
+        expect(isEmpty({})).toBe(true);
+        expect(isEmpty([])).toBe(true);
+        expect(isEmpty("")).toBe(true);
+        expect(isEmpty(0)).toBe(false);
+        expect(isPlainObject({})).toBe(true);
+        expect(isPlainObject(new Date())).toBe(false);
+        expect(isPromise(Promise.resolve())).toBe(true);
+        expect(isPromise({})).toBe(false);
+
+        // 身份证信息提取
+        expect(getAge('11010519491231002X', new Date(2026, 9, 23))).toBe(76);
+        expect(getGender('11010519491231002X')).toBe('female');
+        expect(getAge('invalid')).toBe(null);
+
+        // 银行卡组织
+        expect(getBankCardType('4111111111111111')).toBe('visa');
+        expect(getBankCardType('6222021234567890123')).toBe('unionpay');
+        expect(getBankCardType('123')).toBe('unknown');
     });
 });

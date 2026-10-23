@@ -42,14 +42,19 @@ const text = deepCopy(obj);
 
 ## API
 
-共 73 个导出，按功能分类如下。
+共 135 个导出，按功能分类如下。
 
-### 函数控制
+### 异步与函数控制
 
 | 函数 | 说明 |
 | --- | --- |
-| `debounce(fn, delay)` | 防抖，连续触发时只在停止后执行最后一次 |
-| `throttle(fn, delay)` | 节流，间隔 `delay` 毫秒内只执行一次 |
+| `sleep(ms)` | 延时，返回 `Promise` |
+| `retry(fn, { retries, delay, backoff })` | 异步重试，`retries` 为首次失败后的重试次数 |
+| `withTimeout(promise, ms)` | 超过 `ms` 毫秒未完成则 reject |
+| `memoize(fn, resolver?)` | 结果缓存，默认以第一个参数为 key |
+| `once(fn)` | 只执行一次，后续调用返回第一次结果 |
+| `debounce(fn, delay, opts?)` | 防抖，支持 `leading` / `trailing` 及 `cancel()` / `flush()` |
+| `throttle(fn, delay, opts?)` | 节流，默认首次立即执行，支持 `trailing` 及 `cancel()` |
 
 ### 对象、拷贝与 this
 
@@ -60,6 +65,12 @@ const text = deepCopy(obj);
 | `call(context, ...args)` | 手写 `Function.prototype.call` |
 | `apply(context, args)` | 手写 `Function.prototype.apply` |
 | `bind(context, ...args)` | 手写 `Function.prototype.bind` |
+| `get(obj, path, defaultValue?)` | 按路径读取，支持 `a.b[0].c` |
+| `set(obj, path, value)` | 按路径写入，返回原对象 |
+| `pick(obj, keys)` | 挑选指定字段 |
+| `omit(obj, keys)` | 排除指定字段 |
+| `deepMerge(target, source)` | 深合并，数组替换，直接修改 `target` |
+| `deepEqual(a, b)` | 深比较，支持 `Date`、`RegExp` |
 
 ### 日期时间
 
@@ -79,6 +90,18 @@ const text = deepCopy(obj);
 | `trim(str, type)` | 去空格：`1` 全部（默认）、`2` 前后、`3` 前、`4` 后 |
 | `telFormat(tel)` | 手机号中间四位变 `*` |
 | `firstLetterUpper(str)` | 字符串首字母大写（`fistLetterUpper` 为历史拼写，保留兼容） |
+| `escapeRegExp(str)` | 转义正则特殊字符 |
+| `camelCase(str)` | `foo-bar` → `fooBar` |
+| `kebabCase(str)` | `fooBar` → `foo-bar` |
+| `truncate(str, len, suffix?)` | 截断字符串，总长度不超过 `len` |
+| `encodeHtml(str)` | HTML 特殊字符编码 |
+| `unescapeHtml(str)` | HTML 实体解码（`escapeHtml` 的同义函数） |
+| `maskPhone(phone)` | 手机号脱敏 `177****0699` |
+| `maskIdCard(idCard)` | 身份证脱敏，保留前 6 位和后 4 位 |
+| `maskName(name)` | 姓名脱敏，保留首字 |
+| `maskEmail(email)` | 邮箱脱敏，保留前 2 位和域名 |
+| `maskBankCard(cardNo)` | 银行卡脱敏，保留后 4 位 |
+| `uuid()` | UUID v4，优先使用 `crypto.randomUUID` |
 
 ### 数组
 
@@ -89,6 +112,9 @@ const text = deepCopy(obj);
 | `unique(arr)` | 数组去重 |
 | `flat(arr)` | 数组扁平化 |
 | `randomNum(arr)` | 从数组中随机取一个元素 |
+| `chunk(arr, size)` | 按固定长度分组 |
+| `groupBy(arr, key)` | 分组，`key` 可为字段名或函数 |
+| `sortBy(arr, key, order?)` | 按字段/函数排序，返回新数组，`order` 为 `asc` / `desc` |
 
 ### 排序（原地排序，返回排序后的数组）
 
@@ -106,7 +132,7 @@ const text = deepCopy(obj);
 | 函数 | 说明 |
 | --- | --- |
 | `isEmail(s)` | 邮箱 |
-| `isPhone(s)` | 中国大陆手机号 |
+| `isPhone(s, segments?)` | 中国大陆手机号，可传号段数组（如 `["38", "76"]`） |
 | `isURL(s)` | URL |
 | `isWeiXin(s)` | 微信号 |
 | `isQQ(s)` | QQ 号 |
@@ -115,7 +141,13 @@ const text = deepCopy(obj);
 | `isCn(s)` | 是否包含中文 |
 | `isPostNo(s)` | 邮编 |
 | `isRGB(s)` | 16 进制颜色 |
-| `isIdCard(s)` | 身份证号 |
+| `isIdCard(s)` | 身份证号，校验出生日期与 18 位校验码，兼容 15 位 |
+| `isCreditCode(s)` | 统一社会信用代码（18 位含校验码） |
+| `isOrganizationCode(s)` | 组织机构代码（9 位） |
+| `isNewEnergyCarNo(s)` | 新能源车牌（8 位） |
+| `getAge(idCard, now?)` | 从身份证号计算年龄，无效返回 `null` |
+| `getGender(idCard)` | 从身份证号取性别：`male` / `female` |
+| `getBankCardType(cardNo)` | 根据卡号前缀识别卡组织：`visa` / `mastercard` / `unionpay` 等 |
 | `isIpv4(s)` | IPv4 地址 |
 | `bankCardCheck(num)` | 银行卡号（Luhn 算法） |
 | `checkNum(value)` | 是否为数字 |
@@ -125,6 +157,10 @@ const text = deepCopy(obj);
 | `isType(value)` | 返回数据类型名，如 `String`、`Array` |
 | `isVersion(value)` | 是否为 `X.Y.Z` 版本号 |
 | `isPassport(value)` | 护照号（含香港、澳门） |
+| `isNil(value)` | 是否为 `null` / `undefined` |
+| `isPromise(value)` | 是否为 Promise |
+| `isPlainObject(value)` | 是否为普通对象 |
+| `isEmpty(value)` | 是否为空：`null`、`undefined`、`""`、`[]`、`{}`、空 `Map`/`Set` |
 
 ### 数字、金额与随机数
 
@@ -133,7 +169,14 @@ const text = deepCopy(obj);
 | `thousandth(num)` | 数字千分位，如 `10,000,000` |
 | `changeToChinese(num)` | 阿拉伯数字转中文数字，如 `一萬五仟...` |
 | `digitUppercase(n)` | 数字转人民币大写金额，如 `壹仟零伍拾贰万...元整` |
-| `formatSize(size)` | 文件大小格式化，支持 `B` / `KB` / `MB` / `GB` |
+| `formatSize(size)` | 文件大小格式化，支持 `B` / `KB` / `MB` / `GB` / `TB` / `PB` |
+| `clamp(n, min, max)` | 限制数值范围 |
+| `sum(arr)` / `average(arr)` | 求和 / 平均值 |
+| `round(n, precision?)` | 四舍五入，规避浮点误差 |
+| `add(a, b)` / `sub(a, b)` | 精确加 / 减 |
+| `mul(a, b)` / `div(a, b)` | 精确乘 / 除 |
+| `formatCurrency(amount, opts?)` | 金额格式化，默认 `¥1,234.56` |
+| `parseMoney(value)` | 金额字符串转数字，如 `¥1,234.56` → `1234.56` |
 | `largeNumberAdd(a, b)` | 大数相加，参数必须为字符串数字 |
 | `largeNumbersMultiply(a, b)` | 大数相乘，参数必须为字符串数字 |
 | `randomString(len)` | 指定长度随机字符串 |
@@ -164,6 +207,24 @@ const text = deepCopy(obj);
 | `scrollAnimation(currentY, targetY)` | 滚动动画缓冲 |
 | `scrollToTop()` | 平滑滚动到页面顶部 |
 | `scrollToBottom()` | 滚动到页面底部 |
+| `parseQuery(url?)` | 解析查询参数，同名参数返回数组；不传 `url` 时取 `location.search` |
+| `stringifyQuery(params)` | 对象转查询字符串，数组展开为同名参数 |
+| `setQuery(url, key, value)` | 设置查询参数，返回新 URL |
+| `removeQuery(url, key)` | 删除查询参数，返回新 URL |
+| `storageSet(key, value, expire?)` | localStorage 存值，`expire` 为有效时长（毫秒） |
+| `storageGet(key, defaultValue?)` | localStorage 取值，过期自动删除 |
+| `storageRemove(key)` | 删除 localStorage |
+| `on(el, type, handler, options?)` | 绑定事件，返回解绑函数 |
+| `off(el, type, handler, options?)` | 解绑事件 |
+| `delegate(root, selector, type, handler)` | 事件委托，返回解绑函数 |
+| `isInViewport(el)` | 元素是否在视口内 |
+| `copyText(text)` | 复制文本，优先 `navigator.clipboard`，返回 `Promise` |
+| `downloadFile(data, filename, mime?)` | 触发文件下载 |
+| `readFileAsText(file)` | 读取文本文件，返回 `Promise` |
+| `blobToBase64(blob)` | Blob 转 base64（不含 `data:` 前缀） |
+| `base64ToBlob(base64, mime?)` | base64 转 Blob |
+
+> `getUrlParms` 为历史接口，未找到参数时返回 `false`，新代码建议使用 `parseQuery`。
 
 ## 开发与测试
 
