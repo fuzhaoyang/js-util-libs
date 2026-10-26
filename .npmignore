@@ -6,3 +6,5 @@ coverage
 *.test.js
 .github
 yarn.lock
+build.mjs
+test-setup.js

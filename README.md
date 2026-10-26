@@ -8,7 +8,12 @@
 
 另外，不要重复造轮子，把精力放在业务逻辑上！
 
-> 说明：本库同时支持 CommonJS 与 ESM（通过打包器或 Node.js 对 CJS 的命名导出识别）。部分函数依赖浏览器环境（`document`、`window`、`navigator`），在 Node 环境中调用前请先模拟对应全局对象。
+> 说明：本库提供三种产物，覆盖原生浏览器、Node.js 和打包器场景：
+> - CommonJS：`index.js`（`require`）
+> - ESM：`dist/index.mjs`（`import`、Vite/Webpack 等打包器）
+> - IIFE：`dist/index.global.js`（原生 `<script>`，暴露全局 `jsUtilLibs`）
+>
+> 部分函数依赖浏览器环境（`document`、`window`、`navigator`），在 Node 环境中调用前请先模拟对应全局对象。
 
 ## Install（安装）
 
@@ -18,13 +23,36 @@ npm install js-util-libs --save
 
 ## Usage（使用）
 
-CommonJS：
+### 原生浏览器
+
+普通 `<script>`：
+
+```html
+<script src="https://unpkg.com/js-util-libs@1.3.1/dist/index.global.js"></script>
+<script>
+  const { deepCopy, dateFormat, chunk } = jsUtilLibs;
+  console.log(chunk([1, 2, 3], 2));
+</script>
+```
+
+原生 ESM（`<script type="module">`）：
+
+```html
+<script type="module">
+  import { deepCopy, chunk } from "https://unpkg.com/js-util-libs@1.3.1/dist/index.mjs";
+  console.log(chunk([1, 2, 3], 2));
+</script>
+```
+
+也可以把 `dist/index.global.js` 或 `dist/index.mjs` 下载到项目里直接引用，无需打包器。
+
+### CommonJS
 
 ```js
 const { deepCopy, dateFormat } = require('js-util-libs');
 ```
 
-ESM / 打包器：
+### ESM / 打包器
 
 ```js
 import { deepCopy, dateFormat } from 'js-util-libs';
@@ -231,16 +259,23 @@ const text = deepCopy(obj);
 ```bash
 npm install
 npm test          # 运行全部测试
+npm run build     # 生成 dist/index.mjs 与 dist/index.global.js
 npm run watch     # 监听模式
 npm run coverage  # 生成覆盖率报告
 ```
+
+运行 `npm pack` / `npm publish` 时会通过 `prepack` 自动构建 `dist`，无需手动执行。
 
 入口冒烟测试位于 `__tests__/index.spec.js`，会检查 `index.js` 的全部导出是否存在，避免出现「测试全绿但入口不可用」的情况。
 
 ## 目录结构
 
 ```
-index.js            # 入口，统一导出
+index.js            # CommonJS 入口，统一导出
+build.mjs           # 使用 esbuild 生成 ESM / IIFE 产物
+dist/               # 构建产物（发布时生成）
+  index.mjs         # ESM，供 import / 打包器 / 原生 module 使用
+  index.global.js   # IIFE，暴露全局 jsUtilLibs
 src/<模块名>/        # 各功能模块
   index.js
   __tests__/        # 单测（部分模块为 __test__）

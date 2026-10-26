@@ -8,6 +8,7 @@ describe("去除空格", () => {
         const str = " asasa asasa asasa "
         expect(trim(str)).toEqual('asasaasasaasasa');
         expect(trim(str,2)).toEqual('asasa asasa asasa');
+        expect(trim('  a b  ', 2)).toEqual('a b');
         expect(trim(str,3)).toEqual('asasa asasa asasa ');
         expect(trim(str,4)).toEqual(' asasa asasa asasa');
         expect(trim('abc   ', 3)).toEqual('abc   ');

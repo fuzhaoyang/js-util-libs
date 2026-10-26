@@ -1,12 +1,27 @@
 {
     "name": "js-util-libs",
     "description": "js常见的函数工具库",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "author": "fuzhaoyang <932647051@qq.com>",
     "license": "MIT",
     "main": "index.js",
+    "module": "dist/index.mjs",
+    "unpkg": "dist/index.global.js",
+    "jsdelivr": "dist/index.global.js",
+    "exports": {
+        ".": {
+            "browser": "./dist/index.mjs",
+            "import": "./dist/index.mjs",
+            "require": "./index.js",
+            "default": "./index.js"
+        },
+        "./package.json": "./package.json",
+        "./*": "./*"
+    },
     "private": false,
     "scripts": {
+        "build": "node build.mjs",
+        "prepack": "npm run build",
         "test": "jest",
         "watch": "jest --watchAll",
         "coverage": "jest --coverage"
@@ -95,7 +110,14 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
     },
+    "jest": {
+        "testEnvironment": "node",
+        "setupFiles": [
+            "./test-setup.js"
+        ]
+    },
     "devDependencies": {
+        "esbuild": "^0.28.2",
         "jest": "^26.0.1"
     }
 }
