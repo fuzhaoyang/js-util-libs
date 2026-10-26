@@ -7,16 +7,22 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  unit:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [ 18, 20, 22 ]
+    env:
+      TZ: UTC
 
     steps:
     - uses: actions/checkout@v4
 
     - uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: ${{ matrix.node-version }}
         cache: npm
 
     - name: Install dependencies
@@ -25,5 +31,60 @@ jobs:
     - name: Run Jest
       run: npm test
 
+  compat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: UTC
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: npm
+        cache-dependency-path: |
+          package-lock.json
+          compat/package-lock.json
+
+    - name: Install root dependencies
+      run: npm ci --no-audit --no-fund
+
     - name: Build dist
       run: npm run build
+
+    - name: Install compat dependencies
+      run: npm ci --prefix compat --no-audit --no-fund
+
+    - name: Check types
+      working-directory: compat
+      run: npm run test:types
+
+    - name: Check SSR import
+      working-directory: compat
+      run: npm run test:ssr
+
+    - name: Check published tarball
+      working-directory: compat
+      run: npm run test:pack
+
+    - name: Build compat apps
+      working-directory: compat
+      run: npm run build
+
+    - name: Cache Playwright browsers
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ runner.os }}-playwright-${{ hashFiles('compat/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-playwright-
+
+    - name: Install Playwright browsers
+      working-directory: compat
+      run: npx playwright install --with-deps chromium firefox webkit
+
+    - name: Run browser matrix
+      working-directory: compat
+      run: npx playwright test

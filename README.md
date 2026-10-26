@@ -268,10 +268,52 @@ npm run coverage  # 生成覆盖率报告
 
 入口冒烟测试位于 `__tests__/index.spec.js`，会检查 `index.js` 的全部导出是否存在，避免出现「测试全绿但入口不可用」的情况。
 
+## 多环境兼容测试
+
+`compat/` 下维护了一套跨框架、跨浏览器的真实环境测试，覆盖：
+
+| 维度 | 覆盖内容 |
+| --- | --- |
+| 浏览器 | Chromium、Firefox、WebKit，桌面 + iOS/Android 移动端仿真 |
+| 框架 | Vue 3 + Vite、React 19 + Vite、Angular 19 生产构建 |
+| 模块加载 | 原生 IIFE、原生 ESM、CJS、ESM、打包器 |
+| 运行环境 | Node 18/20/22、Web Worker、严格 CSP |
+| 发布产物 | `.d.ts` 类型、SSR import、npm tarball 安装 |
+| 行为 | 135 个导出的完整契约测试 |
+
+本地运行：
+
+```bash
+npm run build                 # 先生成根目录 dist
+npm ci --prefix compat        # 安装兼容测试依赖
+npm run test:types  --prefix compat
+npm run test:ssr    --prefix compat
+npm run test:pack   --prefix compat
+npm run build       --prefix compat
+
+# 首次需要下载 Playwright 浏览器
+npx --prefix compat playwright install
+
+# 跑完整浏览器矩阵
+npx --prefix compat playwright test
+
+# 或用系统 Chrome 只跑 Chromium 两个项目
+PLAYWRIGHT_SYSTEM_CHROME=1 npx --prefix compat playwright test --project=chromium --project=mobile-chrome
+```
+
+也可以用根目录脚本一次性运行（需要已安装 Playwright 浏览器）：
+
+```bash
+npm run test:compat
+```
+
+CI 中会并行执行 Node 18/20/22 单测，以及 Chromium/Firefox/WebKit/移动端的兼容矩阵。
+
 ## 目录结构
 
 ```
 index.js            # CommonJS 入口，统一导出
+index.d.ts          # TypeScript 类型声明
 build.mjs           # 使用 esbuild 生成 ESM / IIFE 产物
 dist/               # 构建产物（发布时生成）
   index.mjs         # ESM，供 import / 打包器 / 原生 module 使用
@@ -279,6 +321,13 @@ dist/               # 构建产物（发布时生成）
 src/<模块名>/        # 各功能模块
   index.js
   __tests__/        # 单测（部分模块为 __test__）
+compat/             # 跨框架 / 跨浏览器兼容测试
+  shared/smoke.mjs  # 135 个导出的共享契约测试
+  apps/             # Vue / React / Angular 示例应用
+  tests/            # Playwright 用例（框架、Worker、CSP）
+  types/            # TypeScript 消费方类型测试
+  ssr/              # SSR import 冒烟
+  pack/             # npm tarball 安装验收
 ```
 
 ## 欢迎大家提 PR 扩充函数库，为开源社区贡献自己一份力

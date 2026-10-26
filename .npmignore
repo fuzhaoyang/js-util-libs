@@ -8,3 +8,4 @@ coverage
 yarn.lock
 build.mjs
 test-setup.js
+compat

@@ -21,3 +21,9 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+test-results
+playwright-report
+compat/apps/*/smoke.mjs
+compat/apps/angular/smoke.ts
+compat/apps/*/public/fixtures
+.angular

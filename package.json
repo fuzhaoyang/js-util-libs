@@ -6,10 +6,12 @@
     "license": "MIT",
     "main": "index.js",
     "module": "dist/index.mjs",
+    "types": "index.d.ts",
     "unpkg": "dist/index.global.js",
     "jsdelivr": "dist/index.global.js",
     "exports": {
         ".": {
+            "types": "./index.d.ts",
             "browser": "./dist/index.mjs",
             "import": "./dist/index.mjs",
             "require": "./index.js",
@@ -24,7 +26,8 @@
         "prepack": "npm run build",
         "test": "jest",
         "watch": "jest --watchAll",
-        "coverage": "jest --coverage"
+        "coverage": "jest --coverage",
+        "test:compat": "npm --prefix compat run test:all"
     },
     "keywords": [
         "js-util-libs",

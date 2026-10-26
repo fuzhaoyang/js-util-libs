@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <body>
+    <script type="module">
+      const worker = new Worker("/worker.mjs", { type: "module" });
+      worker.onmessage = (event) => {
+        window.__WORKER_RESULTS__ = event.data;
+      };
+      worker.onerror = (event) => {
+        window.__WORKER_RESULTS__ = { error: String(event.message || event) };
+      };
+    </script>
+  </body>
+</html>

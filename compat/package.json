@@ -1,0 +1,37 @@
+{
+  "name": "js-util-libs-compat",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "playwright test",
+    "test:types": "tsc -p types/tsconfig.json",
+    "test:ssr": "node ssr/import-smoke.mjs",
+    "test:pack": "node pack/verify-pack.mjs",
+    "test:all": "npm run test:types && npm run test:ssr && npm run test:pack && npm run build && playwright test"
+  },
+  "dependencies": {
+    "@angular/common": "^19.2.0",
+    "@angular/compiler": "^19.2.0",
+    "@angular/core": "^19.2.0",
+    "@angular/platform-browser": "^19.2.0",
+    "@angular/platform-browser-dynamic": "^19.2.0",
+    "js-util-libs": "file:..",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "vue": "^3.5.44",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.2.27",
+    "@angular/cli": "^19.2.27",
+    "@angular/compiler-cli": "^19.2.0",
+    "@playwright/test": "^1.64.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "typescript": "~5.7.2",
+    "vite": "^7.3.7"
+  }
+}
